@@ -7,6 +7,10 @@ gem 'rails', '3.2.11'
 
 gem 'mysql2', '~> 0.3.11'
 
+group :production, :staging do
+  gem "pg"
+end
+
 group :test, :development do
    gem "rspec-rails", "~> 2.4"
 end
