@@ -1,10 +1,15 @@
 HitsApp::Application.routes.draw do
 
   get "players/index"
+  match '/players/search', :controller => 'players', :action => 'search'
   resources :players
   root :to => 'players#index'
-
-
+  resource :players do
+      collection do
+         get :search
+         post :search
+      end
+  end 
 
 
   # The priority is based upon order of creation:

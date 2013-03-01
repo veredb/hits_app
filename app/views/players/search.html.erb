@@ -1,0 +1,16 @@
+<title>Search Players</title>
+<h1>Search Players</h1>
+
+<ul>
+  <li>PlayerID,yearID,H,AB</li>
+  <% @players.each do |player| %>
+    <li>
+       <%= player.playerID %>
+       <%= player.yearID %>
+       <%= player.H %>
+       <%= player.AB %>
+
+    </li>
+  <% end %>
+</ul>
+

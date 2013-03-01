@@ -1,6 +1,7 @@
 <title>All Players</title>
 <h1>All Players</h1>
 
+<%= link_to "search_player", search_players_path %>
 <ul>
   <% @players.each do |player| %>
     <li>
@@ -8,3 +9,4 @@
     </li>
   <% end %>
 </ul>
+
