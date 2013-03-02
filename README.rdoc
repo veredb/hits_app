@@ -8,3 +8,5 @@ The csv file includes batting results in a baseball game.
 A search action was added to the controller, which queries the database for the most improved batting average( hits / at-bats) 
 
 from 2009 to 2010.  Only including players with at least 200 at-bats.
+
+The app is supported by rspec tests.
