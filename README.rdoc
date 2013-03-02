@@ -1,8 +1,7 @@
-
 This is a Ruby on Rails project, that is supported by a mysql database.
 
 
-In this app, a scv file - lib/tasks/import_batting.rake, is imported to the database by a rake task.
+In this app, a csv file - lib/tasks/import_batting.rake, is imported to the database by a rake task.
 
 The csv file includes batting results in a baseball game.
 
