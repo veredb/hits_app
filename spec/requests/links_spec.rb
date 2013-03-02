@@ -19,6 +19,16 @@ describe "Links" do
         response.should have_selector("a", :href => search_players_path,
                                            :content => "search_players")
      end
-  end
+   end
+
+
+   describe "when in Search Players page" do
+
+     it "should have a All Players link" do
+        visit search_players_path
+        response.should have_selector("a", :href => players_path,
+                                           :content => "All Players")
+     end
+    end
 
 end
