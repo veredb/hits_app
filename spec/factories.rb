@@ -3,7 +3,7 @@ Factory.define :player do |player|
   player.yearID        1987
   player.teamID        "LAA"
   player.G             1
-  player.AB            2
+  player.AB            200 
   player.R             3
   player.H             4
   player.TWOB          5
@@ -17,4 +17,7 @@ end
 
 Factory.sequence :playerID do |n|
  "<a>person-#{n}</a>"
+end
+Factory.sequence :AB do |n|
+  :AB + n
 end
