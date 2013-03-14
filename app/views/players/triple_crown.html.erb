@@ -1,0 +1,14 @@
+<title>Triple Crown</title>
+<h1>Triple Crown</h1>
+
+<%= link_to "All Players", players_path %>
+<ul>
+  <li>PlayerID,yearID,Batting Average,HR,RBI</li>
+    <li>
+       <%= @players.playerID %>
+       <%= @players.yearID %>
+       <%= ((@players.H).to_f/(@players.AB).to_f) %> 
+       <%= @players.HR %>
+       <%= @players.RBI %>
+    </li>
+</ul>

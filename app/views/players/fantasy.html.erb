@@ -1,0 +1,19 @@
+<title>Fantasy Scoring</title>
+<h1>Fantasy Scoring</h1>
+
+<%= link_to "All Players", players_path %>
+<ul>
+  <li>PlayerID,yearID,AB,HR,RBI,SB,CS,Fantasy Scoring</li>
+  <% @players.each do |player| %>
+    <li>
+       <%= player.playerID %>
+       <%= player.yearID %>
+       <%= player.AB %>
+       <%= player.HR %>
+       <%= player.RBI %>
+       <%= player.SB %>
+       <%= player.CS %>
+       <%= ((player.HR).to_f * 4 + (player.RBI).to_f + (player.SB).to_f + (player.CS).to_f).round(5) %>
+    </li>
+  <% end %>
+</ul>

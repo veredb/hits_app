@@ -1,0 +1,15 @@
+<title>Slugging Percentage</title>
+<h1>Slugging Percentage</h1>
+
+<%= link_to "All Players", players_path %>
+<ul>
+  <li>PlayerID,TeamID,YearID, Slugging</li>
+  <% @players.each do |player| %>
+    <li>
+       <%= player.playerID %>
+       <%= player.teamID %>
+       <%= player.yearID %>
+       <%= (((player.H).to_f - (player.TWOB).to_f - (player.THREEB).to_f - (player.HR).to_f + 2 * (player.TWOB).to_f + 3 * (player.THREEB).to_f + 4 * (player.HR).to_f) / (player       .AB).to_f).round(4) %>
+    </li>
+  <% end %>
+</ul>

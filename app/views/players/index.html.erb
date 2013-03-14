@@ -1,7 +1,10 @@
 <title>All Players</title>
 <h1>All Players</h1>
 
-<%= link_to "search_players", search_players_path %>
+<%= link_to "Search Players", search_players_path %><br />
+<%= link_to "Slugging Percentage", slugging_players_path %><br />
+<%= link_to "Fantasy Scoring", fantasy_players_path %><br />
+<%= link_to "Triple Crown", triple_crown_players_path %><br />
 <ul>
   <% @players.each do |player| %>
     <li>

@@ -2,12 +2,21 @@ HitsApp::Application.routes.draw do
 
   get "players/index"
   match '/players/search', :controller => 'players', :action => 'search'
+  match '/players/slugging', :controller => 'players', :action => 'slugging'
+  match '/players/fantasy', :controller => 'players', :action => 'fantasy'
+  match '/players/triple_crown', :controller => 'players', :action => 'triple_crown'
   resources :players
   root :to => 'players#index'
   resource :players do
       collection do
          get :search
          post :search
+         get :slugging
+         post :slugging
+         get :fantasy
+         post :fantasy
+         get :triple_crown
+         post :triple_crown
       end
   end 
 
