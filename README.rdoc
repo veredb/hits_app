@@ -5,8 +5,14 @@ In this app, a csv file - lib/tasks/import_batting.rake, is imported to the data
 
 The csv file includes batting results in a baseball game.
 
-A search action was added to the controller, which queries the database for the most improved batting average( hits / at-bats) 
+-- Search action was added to the controller, which queries the database for the most improved batting average( hits / at-bats) 
 
 from 2009 to 2010.  Only including players with at least 200 at-bats.
+
+-- Slugging percentage action was added, to query the slugging perc. for all players on the Oakland A's (teamID = OAK) in 2007. 
+
+-- Fantasy scoring action was quering the database for the top 5 most improved fantasy players from 2011 to 2012.  Only included players with at least 500 at-bats. 
+
+-- Triple Crown action - to find the winner between 2011 and 2012. No one won the crown, providing an "No winner" message. 
 
 The app is supported by rspec tests.
